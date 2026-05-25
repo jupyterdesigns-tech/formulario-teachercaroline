@@ -20,7 +20,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
         // Usar Formspree para enviar
-        const response = await fetch('https://formspree.io/f/FORM_ID_AQUI', {
+        const response = await fetch('https://formspree.io/f/mqejyqyz', {
             method: 'POST',
             body: formData,
             headers: {
