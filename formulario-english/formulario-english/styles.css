@@ -1,100 +1,100 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Nivelamento de Inglês - Caroline Alves</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <div class="form-header">
-            <h1>Formulário de Nivelamento de Inglês</h1>
-            <p class="subtitle">Olá 👋</p>
-            <p class="description">Para que eu possa preparar aulas mais personalizadas para você, responda este pequeno formulário de nivelamento e interesses.</p>
-        </div>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        <form id="englishForm" class="form-wrapper">
-            <!-- Campo de Nome -->
-            <div class="form-group">
-                <label for="nome" class="label-required">Qual é seu nome?</label>
-                <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Seu nome completo"
-                    required
-                    class="input-field"
-                >
-                <span class="error-message" id="nomeError"></span>
-            </div>
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1e40af;
+    --primary-light: #3b82f6;
+    --secondary-color: #0d47a1;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --bg-light: #f9fafb;
+    --bg-white: #ffffff;
+    --border-color: #e5e7eb;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
 
-            <!-- Campo de Email -->
-            <div class="form-group">
-                <label for="email" class="label-required">E-mail</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="seu.email@exemplo.com"
-                    required
-                    class="input-field"
-                >
-                <span class="error-message" id="emailError"></span>
-            </div>
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: var(--text-primary);
+}
 
-            <!-- Nível de Inglês -->
-            <div class="form-group">
-                <label class="label-required">Como você consideraria seu atual nível de inglês?</label>
-                <div class="radio-group">
-                    <label class="radio-label">
-                        <input type="radio" name="nivel" value="Iniciante" required>
-                        <span>Iniciante</span>
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="nivel" value="Intermediário">
-                        <span>Intermediário</span>
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="nivel" value="Fluente">
-                        <span>Fluente</span>
-                    </label>
-                </div>
-            </div>
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
 
-            <!-- Forma de Aprender -->
-            <div class="form-group">
-                <label class="label-required">Tem maior facilidade/preferência de aprender de qual forma?</label>
-                <div class="checkbox-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="forma_aprender" value="Audiolivro">
-                        <span>Audiolivro</span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="forma_aprender" value="Ouvindo">
-                        <span>Ouvindo</span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="forma_aprender" value="Falando">
-                        <span>Falando</span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="forma_aprender" value="Escrevendo">
-                        <span>Escrevendo</span>
-                    </label>
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="forma_aprender" value="Ainda não sei">
-                        <span>Ainda não sei</span>
-                    </label>
-                </div>
-            </div>
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
 
-            <!-- Assuntos de Interesse -->
-            <div class="form-group">
-                <label class="label-required">Quais desses assuntos você gosta? (Pode escolher mais de um)</label>
-                <div class="checkbox-group">
-                    <label class="checkbox-label">
-                        <input type="checkbox" name="assuntos" value="Animais">
-                        <span>Animais</span>
-                    </label>
-                    <label class="checkbox-label">
+.form-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--bg-white);
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-wrapper {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group:last-of-type {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.label-required::after {
+    content: ' *';
+    color: var(--error-color);
+}
+
+.input-field,
+.textarea-field {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
